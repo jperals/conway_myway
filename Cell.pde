@@ -32,7 +32,7 @@ class Cell {
     return colorComponent;
   }
   private int randomColorComponent() {
-    return int(random(1) < 0.5);
+    return int(random(1) < 0.15);
   }
 }
 
