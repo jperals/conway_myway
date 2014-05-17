@@ -1,3 +1,4 @@
+boolean paused = false;
 int cellSize = 25;
 Tissue tissue;
 
@@ -10,7 +11,15 @@ void setup() {
 }
 
 void draw() {
-  tissue.update();
-  tissue.draw();
+  if(!paused) {
+    tissue.update();
+    tissue.draw();
+  }
+}
+
+void keyPressed() {
+  if(key == ' ') {
+    paused = !paused;
+  }
 }
 
