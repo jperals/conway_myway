@@ -1,5 +1,5 @@
 boolean paused = false;
-int cellSize = 25;
+int cellSize = 5;
 int maxNumberOfNeighbours = 3,
     minNumberOfNeighbours = 2,
     optimalNumberOfNeighbours = 3;
