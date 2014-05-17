@@ -2,7 +2,8 @@ boolean paused = false;
 int cellSize = 5;
 int maxNumberOfNeighbours = 3,
     minNumberOfNeighbours = 2,
-    optimalNumberOfNeighbours = 3;
+    optimalNumberOfNeighbours = 3,
+    range = 1;
 Tissue tissue;
 
 void setup() {
@@ -43,6 +44,13 @@ void keyPressed() {
       break;
     case 'r':
       tissue = new Tissue(cellSize);
+      break;
+    case '-':
+      range = max(0, range - 1);
+      break;
+    case '+':
+      range ++;
+      println("range: " + range);
       break;
     default:
       optimalNumberOfNeighbours = int(key - 48);
