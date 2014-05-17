@@ -26,9 +26,32 @@ class Tissue {
   public void update() {
     for(int row = 0; row < rows; row++) {
       for(int column = 0; column < columns; column++) {
-        cells[row][column].update();
+        int[] colourNeighbours = getColourNeighbours(row, column);
+        cells[row][column].update(colourNeighbours);
       }
     }
+  }
+  private int[] getColourNeighbours(int i, int j) {
+    int redNeighbours = 0,
+        greenNeighbours = 0,
+        blueNeighbours = 0;
+    for(int row = max(i-1, 0); row <= min(i + 1, rows - 1); row++) {
+      for(int column = max(j-1, 0); column <= min(j + 1, columns - 1); column++) {
+        Cell cell = cells[row][column];
+        color cellColor = cell.cellColor;
+        if(red(cellColor) == 1) {
+          redNeighbours += 1;
+        }
+        if(green(cellColor) == 1) {
+          greenNeighbours += 1;
+        }
+        if(blue(cellColor) == 1) {
+          blueNeighbours += 1;
+        }
+      }
+    }
+    int[] neighbours = { redNeighbours, greenNeighbours, blueNeighbours };
+    return neighbours;
   }
 }
 

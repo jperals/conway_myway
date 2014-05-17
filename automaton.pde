@@ -3,8 +3,10 @@ Tissue tissue;
 
 void setup() {
   size(500, 500);
-  tissue = new Tissue(cellSize);
+  frameRate(4);
+  colorMode(RGB, 1);
   noStroke();
+  tissue = new Tissue(cellSize);
 }
 
 void draw() {
