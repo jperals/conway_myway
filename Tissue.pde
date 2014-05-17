@@ -39,15 +39,9 @@ class Tissue {
       for(int column = max(j-1, 0); column <= min(j + 1, columns - 1); column++) {
         Cell cell = cells[row][column];
         color cellColor = cell.cellColor;
-        if(red(cellColor) == 1) {
-          redNeighbours += 1;
-        }
-        if(green(cellColor) == 1) {
-          greenNeighbours += 1;
-        }
-        if(blue(cellColor) == 1) {
-          blueNeighbours += 1;
-        }
+        redNeighbours += red(cellColor);
+        greenNeighbours += green(cellColor);
+        blueNeighbours += blue(cellColor);
       }
     }
     int[] neighbours = { redNeighbours, greenNeighbours, blueNeighbours };
