@@ -26,7 +26,7 @@ void keyPressed() {
       paused = !paused;
       break;
     case 'q':
-      minNumberOfNeighbours ++;
+      minNumberOfNeighbours = min(minNumberOfNeighbours + 1, maxNumberOfNeighbours);
       println("minNumberOfNeighbours: " + minNumberOfNeighbours);
       break;
     case 'a':
@@ -38,7 +38,7 @@ void keyPressed() {
       println("maxNumberOfNeighbours: " + maxNumberOfNeighbours);
       break;
     case 's':
-      maxNumberOfNeighbours --;
+      maxNumberOfNeighbours = max(maxNumberOfNeighbours - 1, minNumberOfNeighbours);
       println("maxNumberOfNeighbours: " + maxNumberOfNeighbours);
       break;
     case 'r':
