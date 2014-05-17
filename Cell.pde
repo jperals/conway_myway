@@ -24,12 +24,11 @@ class Cell {
   private float applyRules(float colorComponent, int numberOfNeighbours) {
     if(numberOfNeighbours == 3 ||
        numberOfNeighbours == 2 && colorComponent == 1) {
-       colorComponent = 1;
+       return 1;
     }
     else {
-      colorComponent = 0;
+      return 0;
     }
-    return colorComponent;
   }
   private int randomColorComponent() {
     return int(random(1) < 0.15);
