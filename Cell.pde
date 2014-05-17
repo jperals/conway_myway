@@ -22,8 +22,8 @@ class Cell {
     rect(0, 0, cellSize, cellSize);
   }
   private float applyRules(float colorComponent, int numberOfNeighbours) {
-    if(numberOfNeighbours == 3 ||
-       numberOfNeighbours == 2 && colorComponent == 1) {
+    if(colorComponent == 0 && numberOfNeighbours == optimalNumberOfNeighbours ||
+       colorComponent == 1 && numberOfNeighbours >= minNumberOfNeighbours && numberOfNeighbours <= maxNumberOfNeighbours) {
        return 1;
     }
     else {
