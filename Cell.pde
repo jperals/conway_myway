@@ -9,13 +9,13 @@ class Cell {
     int redNeighbours = colourNeighbours[0],
         greenNeighbours = colourNeighbours[1],
         blueNeighbours = colourNeighbours[2];
-    float red = red(cellColor),
-        green = green(cellColor),
-        blue = blue(cellColor);
-    red = applyRules(red, redNeighbours);
-    green = applyRules(green, greenNeighbours);
-    blue = applyRules(blue, blueNeighbours);
-    cellColor = color(red, green, blue);
+    float redComponent = red(cellColor),
+        greenComponent = green(cellColor),
+        blueComponent = blue(cellColor);
+    redComponent = applyRules(redComponent, redNeighbours);
+    greenComponent = applyRules(greenComponent, greenNeighbours);
+    blueComponent = applyRules(blueComponent, blueNeighbours);
+    cellColor = color(redComponent, greenComponent, blueComponent);
   }
   public void draw() {
     fill(cellColor);
