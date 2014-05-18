@@ -1,7 +1,7 @@
-class Tissue {
+class Grid {
   Cell[][] cells;
   int cellSize, columns, rows;
-  public Tissue(int cellSize) {
+  public Grid(int cellSize) {
     this.cellSize = cellSize;
     columns = width/cellSize;
     rows = height/cellSize;

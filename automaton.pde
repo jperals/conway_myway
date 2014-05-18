@@ -4,20 +4,20 @@ int maxNumberOfNeighbours = 3,
     minNumberOfNeighbours = 2,
     optimalNumberOfNeighbours = 3,
     range = 1;
-Tissue tissue;
+Grid grid;
 
 void setup() {
   size(500, 500);
   frameRate(4);
   colorMode(RGB, 1);
   noStroke();
-  tissue = new Tissue(cellSize);
+  grid = new Grid(cellSize);
 }
 
 void draw() {
   if(!paused) {
-    tissue.update();
-    tissue.draw();
+    grid.update();
+    grid.draw();
   }
 }
 
@@ -43,7 +43,7 @@ void keyPressed() {
       println("maxNumberOfNeighbours: " + maxNumberOfNeighbours);
       break;
     case 'r':
-      tissue = new Tissue(cellSize);
+      grid = new Grid(cellSize);
       break;
     case '-':
       range = max(0, range - 1);
