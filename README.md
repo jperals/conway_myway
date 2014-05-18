@@ -9,4 +9,4 @@ Pressing a number between 0 and 9 will give the exact number of needed living ne
 
 Each cell has a binary state (live or dead) for each colour component (red, green and blue).
 
-[http://www.openprocessing.org/sketch/148846](Live demo)
+[Live demo](http://www.openprocessing.org/sketch/148846)
