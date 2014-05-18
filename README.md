@@ -1,7 +1,8 @@
-RGB automaton
-=============
+# Conway My Way
 
-Colourful variation of Conway's Game Of Life in which parameters can be manipulated live.
+## An RGB automaton
+
+This is a colourful variation of [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in which parameters can be manipulated live.
 
 Press "q" and "a" to increase and decrease, respectively, the minimum number of living neighbour cells that each cell needs to keep living (by default 2), and "w" and "s" to manipulate the maximum number (by default 3).
 
