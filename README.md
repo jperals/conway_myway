@@ -1,6 +1,6 @@
 # Conway My Way
 
-## An RGB automaton
+### An RGB automaton
 
 This is a colourful variation of [Conway's Game Of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) in which parameters can be manipulated live.
 
